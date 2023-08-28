@@ -1,0 +1,19 @@
+branch-defaults:
+  default:
+    environment: DML-env
+environment-defaults:
+  DML-env:
+    branch: null
+    repository: null
+global:
+  application_name: DML
+  default_ec2_keyname: null
+  default_platform: Python 3.8 running on 64bit Amazon Linux 2
+  default_region: us-west-2
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cliDML
+  sc: git
+  workspace_type: Application

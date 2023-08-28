@@ -1,0 +1,85 @@
+{% extends 'store/index.html' %}
+{% load static %}
+{% block model_category %}
+
+<div class="main-panel">
+    <div class="content-wrapper"><h3 style="font-weight: bolder;
+      padding-block: 1%;">Model category</h3><h5>select a category to view the details</h5>
+      <div class="row">
+
+
+        {% for data in category %}
+
+        <div class="col-lg-6 grid-margin stretch-card">
+          <div  style="background:rgb(75 73 172);"  class="card">
+            <div class="card-body">
+              <h1 style="color: aliceblue; font-size: xx-large;" class="card-title">{{data.category_name}}<span style=" color: black;
+                margin-left: 17px;
+                margin-top: -30px;
+                /* margin-bottom: -79px; */
+                font-weight: bold;
+                " class="badge bg-warning text-dark">STL</span></h1><h6 style="color: aliceblue; font-size: small;">{{data.sub_category_name}}</h6>
+              <!--<img style="width:100%;" src="/{{data.category_image}}" alt="people">--><a href="/models/{{data.id}}"><button style="color: black; font-weight: bold;
+              font-family: monospace;" class="btn btn-warning">View Model</button></a>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+      <!--  <div class="col-lg-6 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Bar chart</h4>
+              <img style="width:100%;" src="{% static 'img.png' %}" alt="people">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Area chart</h4>
+              <canvas id="areaChart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Doughnut chart</h4>
+              <canvas id="doughnutChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Pie chart</h4>
+              <canvas id="pieChart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Scatter chart</h4>
+              <canvas id="scatterChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>-->
+    </div>
+    <!-- content-wrapper ends -->
+    <!-- partial:../../partials/_footer.html -->
+    <footer class="footer">
+      <div class="d-sm-flex justify-content-center justify-content-sm-between">
+        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021. NAVEEN<a href="https://www.bootstrapdash.com/" target="_blank"></a>. All rights reserved.</span>
+        
+      </div>
+    </footer>
+    <!-- partial -->
+  </div>
+  {% endblock model_category %}
